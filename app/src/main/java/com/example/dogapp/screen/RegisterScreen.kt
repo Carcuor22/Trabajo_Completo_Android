@@ -89,7 +89,7 @@ fun RegisterScreen(
                             if (!success) {
                                 errorMessage = error
                             } else {
-                                errorMessage = null // Registro exitoso
+                                errorMessage = null // Registro exitosoo
                             }
                         }
                     } else {
