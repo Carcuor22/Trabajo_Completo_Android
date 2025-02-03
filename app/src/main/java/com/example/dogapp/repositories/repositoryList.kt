@@ -19,10 +19,10 @@ object repositoryList {
 
 
 
-    suspend fun getPerritoId(idPerro: Int): Data? {
+    suspend fun getPerritoId(idPerro: String): Data? {
         return try {
             val response = getListasPerros()
-            return response.find { it.id == idPerro }
+            return response.find { it.id == idPerro.toInt() }
         } catch (e: Exception) {
             e.printStackTrace()
             null // Devuelve null en caso de error

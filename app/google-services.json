@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "168314899217",
+    "project_id": "dogapp-e60ec",
+    "storage_bucket": "dogapp-e60ec.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168314899217:android:0875fc389a4dd7d3e91ab0",
+        "android_client_info": {
+          "package_name": "com.example.dogapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYZBRjqd2020Rr5OqNUIkKs9HJhVZKNWA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

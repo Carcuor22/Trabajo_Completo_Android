@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 
 class PantallaListaPerrosViewModel : ViewModel() {
 
-    // Flow para la lista de comidas
+    // Flow para la lista de perros
     private val _perros = MutableStateFlow<List<Data>>(emptyList())
     val perritod: StateFlow<List<Data>> = _perros
 
@@ -29,10 +29,10 @@ class PantallaListaPerrosViewModel : ViewModel() {
                 val listaPerros = repositoryList.getListasPerros()
                 _perros.value = listaPerros
                 if (listaPerros.isEmpty()) {
-                    _error.value = "No se encontraron comidas."
+                    _error.value = "No se encontraron perros."
                 }
             } catch (e: Exception) {
-                _error.value = "Error al obtener las comidas: ${e.localizedMessage}"
+                _error.value = "Error al obtener los perros: ${e.localizedMessage}"
                 _perros.value = emptyList() // En caso de error, vaciar lista
             }
         }

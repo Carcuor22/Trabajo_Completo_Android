@@ -2,11 +2,7 @@ package com.example.dogapp.navegacion
 
 import kotlinx.serialization.Serializable
 
-@Serializable
-object VistaPerros
 
-@Serializable
-object ListaPerros
-
-@Serializable
-data class PantallaDetallePerro(val id: Int)
+const val VistaPerros = "vistaPerros"
+const val ListaPerros = "listaPerros"
+const val PantallaDetallePerro = "pantallaDetallePerro"

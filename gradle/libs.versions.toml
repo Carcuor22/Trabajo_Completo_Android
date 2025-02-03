@@ -17,6 +17,7 @@ runtimeLivedata = "1.7.5"
 room = "2.6.1"
 ksp = "1.9.21-1.0.15"
 supportAnnotations = "28.0.0"
+firebaseCommonKtx = "21.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -44,6 +45,7 @@ androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = 
 androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
 androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 support-annotations = { group = "com.android.support", name = "support-annotations", version.ref = "supportAnnotations" }
+firebase-common-ktx = { group = "com.google.firebase", name = "firebase-common-ktx", version.ref = "firebaseCommonKtx" }
 
 
 [plugins]

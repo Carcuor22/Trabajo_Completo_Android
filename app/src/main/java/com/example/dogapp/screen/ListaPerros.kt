@@ -162,7 +162,7 @@ fun PantallaListaPerrosScreen(
 
                                     Spacer(modifier = Modifier.height(8.dp))
                                     Text(
-                                        text = "Agregar Receta",
+                                        text = "Agregar Perro",
                                         modifier = Modifier.padding(8.dp),
                                         style = MaterialTheme.typography.bodyLarge,
                                         color = MaterialTheme.colorScheme.onBackground
