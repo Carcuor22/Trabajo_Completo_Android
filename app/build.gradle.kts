@@ -1,3 +1,5 @@
+import com.android.build.api.dsl.Packaging
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -9,6 +11,7 @@ plugins {
 android {
     namespace = "com.example.dogapp"
     compileSdk = 34
+
 
     defaultConfig {
         applicationId = "com.example.dogapp"
@@ -47,9 +50,16 @@ android {
     }
     packaging {
         resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            excludes += "/META-INF/DEPENDENCIES"
+            excludes += "/META-INF/LICENSE"
+            excludes += "/META-INF/LICENSE.txt"
+            excludes += "/META-INF/NOTICE"
+            excludes += "/META-INF/NOTICE.txt"
+            excludes += "/META-INF/INDEX.LIST"
         }
     }
+
+
 }
 
 dependencies {
@@ -67,6 +77,11 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     implementation("androidx.navigation:navigation-compose:2.8.3")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
+    implementation( "com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.0")
+    implementation ("androidx.activity:activity-compose:1.4.0")
+    implementation ("io.coil-kt:coil-compose:1.4.0")
     implementation(libs.androidx.runtime.livedata)
     implementation (libs.retrofit)
     implementation (libs.converter.gson)
@@ -74,6 +89,7 @@ dependencies {
     implementation(libs.androidx.room.runtime)
     implementation(libs.support.annotations)
     implementation(libs.firebase.common.ktx)
+    implementation(libs.firebase.appdistribution.gradle)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

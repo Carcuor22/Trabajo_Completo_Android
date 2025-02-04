@@ -2,8 +2,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.dogapp.navegacion.VistaPerros
-import com.example.dogapp.screen.AuthViewModel
+import com.example.dogapp.screen.AnimalesScreen
+import com.example.dogapp.viewModel.AuthViewModel
 import com.example.dogapp.screen.LoginScreen
 import com.example.dogapp.screen.PantallaInicioScreen
 import com.example.dogapp.screen.RegisterScreen
@@ -16,30 +16,26 @@ fun Navegacion() {
 
     NavHost(
         navController = navController,
-        startDestination = VistaPerros
+        startDestination = "pantalla_inicio"
     ) {
-        // Pantalla de inicio
-        composable(VistaPerros) {
+        composable("pantalla_inicio") {
             PantallaInicioScreen(
-                navegarAPantallaListaPerros = { navController.navigate("ListaPerros") },
+                navegarAPantallaListaPerros = { navController.navigate("animales") },
                 navegarALogin = { navController.navigate("login") },
                 navegarARegistro = { navController.navigate("register") },
                 navegarAResetPassword = { navController.navigate("resetPassword") }
-
             )
         }
 
-        // Pantalla de inicio de sesión
         composable("login") {
             LoginScreen(
                 viewModel = authViewModel,
                 navegarARegistro = { navController.navigate("register") },
                 navegarAResetPassword = { navController.navigate("resetPassword") },
-                navegarAHome = { navController.navigate(VistaPerros) } // Redirige a Home
+                navegarAHome = { navController.navigate("animales") } // Ahora redirige a la lista de animales
             )
         }
 
-        // Pantalla de registro
         composable("register") {
             RegisterScreen(
                 viewModel = authViewModel,
@@ -47,12 +43,16 @@ fun Navegacion() {
             )
         }
 
-        // Pantalla de restablecimiento de contraseña
         composable("resetPassword") {
             ResetPasswordScreen(
                 viewModel = authViewModel,
                 navegarALogin = { navController.navigate("login") }
             )
         }
+
+        composable("animales") {
+            AnimalesScreen()
+        }
     }
+
 }
