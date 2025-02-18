@@ -27,7 +27,7 @@ fun ResetPasswordScreen(
     Box(modifier = Modifier.fillMaxSize()) {
         // Imagen de fondo
         AsyncImage(
-            model = "https://images.pexels.com/photos/573239/pexels-photo-573239.jpeg",
+            model = "https://images.pexels.com/photos/3628100/pexels-photo-3628100.jpeg",
             contentDescription = "Fondo",
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop

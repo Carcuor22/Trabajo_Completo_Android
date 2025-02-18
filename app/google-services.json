@@ -12,7 +12,28 @@
           "package_name": "com.example.dogapp"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "168314899217-6i87esk5f2ntjqo7r2eil4hb76ju6oq7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dogapp",
+            "certificate_hash": "8f0fc6f99bf7a52677a733f4785682be55095f87"
+          }
+        },
+        {
+          "client_id": "168314899217-q1751fkigofuem0on9brijeo1ivkv7vm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dogapp",
+            "certificate_hash": "ac5c536b704752065de05f36d6fe326523405943"
+          }
+        },
+        {
+          "client_id": "168314899217-mba5r3aqrcagkchnjrs1d6trocs2rlbv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAYZBRjqd2020Rr5OqNUIkKs9HJhVZKNWA"
@@ -20,7 +41,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "168314899217-mba5r3aqrcagkchnjrs1d6trocs2rlbv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

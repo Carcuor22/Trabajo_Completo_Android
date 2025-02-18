@@ -74,22 +74,29 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.coil)
     implementation(libs.icon.extended)
-    implementation(libs.androidx.navigation.compose)
-    implementation("androidx.navigation:navigation-compose:2.8.3")
+    implementation(libs.androidx.navigation.compose) // ✅ Mantén solo una navegación
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
-    implementation( "com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.0")
-    implementation ("androidx.activity:activity-compose:1.4.0")
-    implementation ("io.coil-kt:coil-compose:1.4.0")
+
+    // Retrofit (Eliminar duplicados)
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // ViewModel (Actualizar a la última versión)
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+    implementation("androidx.activity:activity-compose:1.8.0")
+    implementation("io.coil-kt:coil-compose:2.2.2")
+
     implementation(libs.androidx.runtime.livedata)
-    implementation (libs.retrofit)
-    implementation (libs.converter.gson)
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.room.runtime)
     implementation(libs.support.annotations)
-    implementation(libs.firebase.common.ktx)
-    implementation(libs.firebase.appdistribution.gradle)
+
+    // Firebase (Usar BOM y evitar duplicados)
+    implementation(platform("com.google.firebase:firebase-bom:32.2.0")) // ✅ Gestiona versiones automáticamente
+    implementation("com.google.firebase:firebase-auth-ktx") // ✅ Firebase Auth
+    implementation("com.google.firebase:firebase-firestore-ktx") // ✅ Firestore SDK
+    implementation("com.google.android.gms:play-services-auth:20.7.0") // Google Sign-In
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -97,7 +104,4 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation("com.google.firebase:firebase-auth-ktx:22.0.0") // Firebase Auth
-    implementation("com.google.android.gms:play-services-auth:20.7.0") // Google Sign-In
-
 }

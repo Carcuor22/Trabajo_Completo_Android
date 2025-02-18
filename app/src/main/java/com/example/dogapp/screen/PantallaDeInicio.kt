@@ -17,10 +17,10 @@ import coil.compose.AsyncImage
 
 @Composable
 fun PantallaInicioScreen(
-    navegarAPantallaListaPerros: () -> Unit,
     navegarALogin: () -> Unit,
     navegarARegistro: () -> Unit,
-    navegarAResetPassword: () -> Unit
+    navegarAResetPassword: () -> Unit,
+    navegarAGestionFirestore: () -> Unit
 ) {
     Box(
         modifier = Modifier
@@ -117,22 +117,6 @@ fun PantallaInicioScreen(
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Botón para navegar a la pantalla de lista de perros
-            Button(
-                onClick = { navegarAPantallaListaPerros() },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 8.dp),
-                shape = RoundedCornerShape(16.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFF4511E))
-            ) {
-                Text(
-                    text = "Ver Lista de Perros 🐕",
-                    color = Color.White,
-                    fontSize = 18.sp,
-                    fontWeight = FontWeight.Medium
-                )
-            }
         }
     }
 }
